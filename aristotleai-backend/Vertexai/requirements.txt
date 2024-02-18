@@ -1,0 +1,5 @@
+vertexai
+flask
+flask-cors
+google
+google-cloud-aiplatform
