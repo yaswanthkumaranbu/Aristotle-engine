@@ -1,6 +1,6 @@
 
 from google.oauth2.service_account import Credentials
-
+from  google.auth.transport.requests import Request
 
 # Path to API key file
 key_path=".\module\gai\key.json"
@@ -8,8 +8,12 @@ credentials = Credentials.from_service_account_file(
     key_path,
     scopes=['https://www.googleapis.com/auth/cloud-platform'])
 
+
+if credentials.expired:
+    credentials.refresh(Request())
+
 # project and data credentials
-PROJECT_ID = 'aristotle-411006'
+PROJECT_ID = 'elite-name-414210'
 REGION = 'us-central1'
 location="global"
 
@@ -53,7 +57,7 @@ class GaiService:
     #
     def chat_with_gai_hybrid(_self,prompt, session_tokens=None):
         # prompt = """
-        # tell me a motivation story
+        # tell me a motivation story 
         # """
         parameters = {
             "candidate_count": 1,
