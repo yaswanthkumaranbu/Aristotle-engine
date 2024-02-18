@@ -41,7 +41,7 @@ class GaiService:
         "candidate_count": 1,
         "max_output_tokens": 1024,
         "temperature": 0.9,
-        "grounding_source":GroundingSource.VertexAISearch(data_store_id="hybrid-pdf-store_1705518048191",location=location),
+        "grounding_source":GroundingSource.VertexAISearch(data_store_id="datastorejeevaa_1708175278270", location="global", project="582949572253"),
         "top_p": 1,
         }
         print(prompt)
@@ -63,7 +63,7 @@ class GaiService:
             "candidate_count": 1,
             "max_output_tokens": 1024,
             "temperature": 0.9,
-            "grounding_source":GroundingSource.VertexAISearch(data_store_id="website_1705205155526",location=location),
+            "grounding_source":GroundingSource.VertexAISearch(data_store_id="datastorejeevaa_1708175278270", location="global", project="582949572253"),
             "top_p": 1,
         }
         print(prompt)
