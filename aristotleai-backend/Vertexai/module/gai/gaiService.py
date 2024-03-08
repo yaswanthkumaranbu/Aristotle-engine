@@ -68,8 +68,7 @@ class GaiService:
         }
         print(prompt)
         completion = model.predict(
-        f"""you are a model named HRAI dealing with company-related information and being used by professionals to get data, hence try answering in a genuine way.
-        Now answer the following quries accordingly.{prompt}""",
+        f"""{prompt}""",
         **parameters)
         print(completion.text)
 
