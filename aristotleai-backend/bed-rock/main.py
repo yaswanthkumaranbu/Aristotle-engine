@@ -22,6 +22,7 @@ brt = boto3.client(
     region_name='us-west-2',
     aws_access_key_id='AKIAR2KLF3NUTMHQCEVZ',
     aws_secret_access_key='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'
+    
 )
 
 modelId = 'anthropic.claude-v2:1'
