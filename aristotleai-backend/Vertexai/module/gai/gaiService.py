@@ -13,7 +13,7 @@ if credentials.expired:
     credentials.refresh(Request())
 
 # project and data credentials
-PROJECT_ID = 'elite-name-414210'
+PROJECT_ID = 'centillion-dag'
 REGION = 'us-central1'
 location="global"
 
@@ -41,7 +41,6 @@ class GaiService:
         "candidate_count": 1,
         "max_output_tokens": 1024,
         "temperature": 0.9,
-        "grounding_source":GroundingSource.VertexAISearch(data_store_id="datastorejeevaa_1708175278270", location="global", project="582949572253"),
         "top_p": 1,
         }
         print(prompt)
@@ -63,7 +62,6 @@ class GaiService:
             "candidate_count": 1,
             "max_output_tokens": 1024,
             "temperature": 0.9,
-            "grounding_source":GroundingSource.VertexAISearch(data_store_id="datastorejeevaa_1708175278270", location="global", project="582949572253"),
             "top_p": 1,
         }
         print(prompt)
