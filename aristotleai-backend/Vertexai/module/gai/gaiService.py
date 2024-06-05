@@ -3,7 +3,7 @@ from google.oauth2.service_account import Credentials
 from  google.auth.transport.requests import Request
 
 # Path to API key file
-key_path=".\module\gai\key.json"
+key_path="./module/gai/key.json"
 credentials = Credentials.from_service_account_file(
     key_path,
     scopes=['https://www.googleapis.com/auth/cloud-platform'])
@@ -13,7 +13,7 @@ if credentials.expired:
     credentials.refresh(Request())
 
 # project and data credentials
-PROJECT_ID = 'centillion-dag'
+PROJECT_ID = 'moonlit-academy-420405'
 REGION = 'us-central1'
 location="global"
 
@@ -45,7 +45,7 @@ class GaiService:
         }
         print(prompt)
         completion = model.predict(
-        f"""you are a model named HRAI dealing with company-related information and being used by professionals to get data, hence try answering in a genuine way.
+        f"""you are an AI model dealing with company-related information and being used by professionals to get data, hence try answering in a genuine way.
         Now answer the following quries accordingly.
         {prompt}""",
         **parameters)
